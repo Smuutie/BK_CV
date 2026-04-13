@@ -86,7 +86,7 @@ export default function Qualifications() {
   }
 
   return (
-    <div className="max-w-6xl mx-auto py-12 px-4 flex gap-12">
+    <div className="max-w-6xl mx-auto py-12 px-4 flex flex-col lg:flex-row gap-12">
       {/* Left Navigation */}
       <aside className="w-64 hidden lg:block sticky top-32 h-fit">
         <nav className="space-y-2">
@@ -127,7 +127,7 @@ export default function Qualifications() {
               <h2 className="text-3xl font-bold tracking-tight">{skill.title}</h2>
             </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
               {skill.items.map((item) => (
                 <motion.div
                   key={item.name}
@@ -167,7 +167,7 @@ export default function Qualifications() {
             />
             <motion.div
               layoutId={`${selectedSkill.categoryId}-${selectedSkill.item.name}`}
-              className="relative w-full max-w-md bg-card border rounded-2xl p-8 shadow-2xl"
+              className="relative w-full max-w-md bg-card border rounded-2xl p-6 md:p-8 shadow-2xl"
             >
               <button
                 onClick={() => setSelectedSkill(null)}

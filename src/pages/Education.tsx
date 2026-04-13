@@ -53,7 +53,7 @@ export default function Education() {
                 transition={{ delay: index * 0.1 }}
                 className="p-6 rounded-2xl bg-card border shadow-sm"
               >
-                <div className="flex justify-between items-start mb-2">
+                <div className="flex flex-col sm:flex-row justify-between items-start mb-2 gap-2">
                   <h3 className="text-xl font-semibold">{edu.institution}</h3>
                   <span className="text-sm font-normal text-white bg-muted/50 px-3 py-1 rounded">
                     {edu.period}

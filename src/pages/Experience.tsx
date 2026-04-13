@@ -123,8 +123,8 @@ export default function Experience() {
   }
 
   return (
-    <div className="max-w-4xl mx-auto py-12 px-4 relative">
-      <div className="flex items-center space-x-3 mb-16">
+    <div className="max-w-4xl mx-auto py-12 px-6 relative overflow-hidden md:overflow-visible">
+      <div className="flex items-center space-x-3 mb-12 md:mb-16">
         <Briefcase className="w-8 h-8 text-primary" />
         <h2 className="text-3xl font-bold tracking-tight">Professional Experience</h2>
       </div>
@@ -134,15 +134,15 @@ export default function Experience() {
           <div key={expIndex} className="relative">
             {/* Background Glow */}
             <div
-              className="absolute -inset-x-8 -inset-y-12 blur-3xl rounded-full -z-10 transition-opacity duration-1000"
+              className="absolute md:-inset-x-8 -inset-x-0 -inset-y-12 blur-3xl rounded-full -z-10 transition-opacity duration-1000"
               style={{ backgroundColor: exp.color, opacity: 0.3 }}
             />
 
-            <div className="flex items-start">
+            <div className="flex flex-col md:flex-row items-start">
               {/* Company Logo and Name */}
-              <div className="w-1/4 pr-8 text-right sticky top-32">
-                <div className="flex flex-col items-end">
-                  <div className="w-16 h-16 rounded-xl bg-card border flex items-center justify-center overflow-hidden mb-2 shadow-sm">
+              <div className="w-full md:w-1/4 mb-8 md:mb-0 md:pr-8 text-left md:text-right md:sticky md:top-32">
+                <div className="flex flex-row md:flex-col items-center md:items-end gap-4 md:gap-2">
+                  <div className="w-12 h-12 md:w-16 md:h-16 rounded-xl bg-card border flex items-center justify-center overflow-hidden shadow-sm shrink-0">
                     <img src={exp.logo} alt={exp.company} className="w-full h-full object-contain" />
                   </div>
                   <h3 className="text-xl font-bold">{exp.company}</h3>
@@ -150,7 +150,7 @@ export default function Experience() {
               </div>
 
               {/* The Chain and Projects */}
-              <div className="flex-1 relative pl-8 border-l-2 border-dashed border-muted">
+              <div className="flex-1 relative ml-4 md:ml-0 pl-8 border-l-2 border-dashed border-muted">
                 {/* Logo on the chain */}
                 <div className="absolute -left-[17px] -top-1 w-8 h-8 rounded-full bg-background border-2 border-primary flex items-center justify-center z-10">
                   <div className="w-2 h-2 rounded-full bg-primary" />
@@ -175,9 +175,9 @@ export default function Experience() {
                               {project.client}
                             </span>
                           </div>
-                          <div className="flex justify-between items-start mb-1">
+                          <div className="flex flex-col sm:flex-row justify-between items-start mb-1 gap-2">
                             <h4 className="text-lg font-bold">{project.title}</h4>
-                            <span className="text-xs font-normal text-white bg-muted/50 px-2 py-1 rounded">
+                            <span className="text-xs font-normal text-white bg-muted/50 px-2 py-1 rounded whitespace-nowrap">
                               {project.period}
                             </span>
                           </div>

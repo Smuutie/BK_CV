@@ -32,8 +32,8 @@ export default function Home() {
         className="text-center"
       >
         <div className="relative inline-block mb-8">
-          <div className="w-32 h-32 rounded-full bg-gradient-to-tr from-primary to-accent p-1">
-            <div className="w-full h-full rounded-full bg-background flex items-center justify-center text-4xl font-bold">
+          <div className="w-24 h-24 md:w-32 md:h-32 rounded-full bg-gradient-to-tr from-primary to-accent p-1">
+            <div className="w-full h-full rounded-full bg-background flex items-center justify-center text-3xl md:text-4xl font-bold">
               BK
             </div>
           </div>
@@ -45,9 +45,9 @@ export default function Home() {
           />
         </div>
 
-        <div className="mb-8">
-          <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-4">Bozhidar Kuzmanov</h1>
-          <p className="text-xl md:text-2xl text-muted-foreground">
+        <div className="mb-8 px-4">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold tracking-tight mb-4">Bozhidar Kuzmanov</h1>
+          <p className="text-lg md:text-2xl text-muted-foreground">
             Principle software engineer | Java developer | Tinkerer
           </p>
         </div>
@@ -123,7 +123,7 @@ export default function Home() {
             className="p-6 rounded-2xl bg-card border shadow-sm"
           >
             <h3 className="text-xl font-semibold mb-8 text-center">Interests</h3>
-            <div className="flex flex-wrap justify-center gap-12">
+            <div className="flex flex-wrap justify-center gap-8 md:gap-12">
               {interests.map((interest, index) => (
                 <div key={index} className="relative group flex flex-col items-center">
                   <interest.icon className="w-10 h-10 text-muted-foreground group-hover:text-primary transition-colors cursor-pointer" />
